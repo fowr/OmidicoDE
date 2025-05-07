@@ -9,34 +9,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <div class="container">
             <div class="logo">
-                <a href="#"><img src="img/logo-omidicompany-bottom.png" alt="GlobalExport Logo"></a>
+                <a href="#"><img src="img/logo-omidicompany-bottom.png" alt="Omidicompany Logo" style="max-width: 25%;"></a>
             </div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">About</a></li>
                     <li><a href="#">Products</a></li>
-                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li class="mobile-only"><a href="#" class="download-catalog-mobile">Download Catalog</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </nav>
+            <a href="#" class="download-catalog-btn">Download Catalog</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
         </div>
     </header>
 
     <section class="hero">
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-content">
-                <h1>Premium Cookie Factory Machinery</h1>
+                                <h1>Premium Cookie Factory Machinery</h1>
                 <p>Delivering high-quality production equipment to cookie manufacturers worldwide</p>
                 <a href="#" class="btn btn-primary">Explore Our Equipment</a>
+            </div>
+            <div class="hero-image">
+                <img src="img/hero.jpg" alt="Cookie Factory Machinery">
             </div>
         </div>
     </section>
@@ -112,7 +119,7 @@
 
     <section class="carousel-section">
         <div class="container">
-            <h2 class="section-title">Our Machinery Range</h2>
+            <h2 class="section-title">Maid By Our Machinery</h2>
             <div class="carousel-container">
                 <div class="carousel">
                     <div class="carousel-slide active">
@@ -187,7 +194,7 @@
             <div class="cta-content">
                 <h2>Upgrade Your Cookie Production Line</h2>
                 <p>Join leading cookie manufacturers worldwide with our state-of-the-art machinery</p>
-                <a href="#" class="btn btn-light">Request Equipment Catalog</a>
+                <a href="#" class="btn btn-light">Download Catalog</a>
             </div>
         </div>
     </section>

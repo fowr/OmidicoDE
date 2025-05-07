@@ -1,12 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
+    const closeMenu = document.querySelector('.close-menu');
     const navLinks = document.querySelector('.nav-links');
 
     if (hamburger) {
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
+            navLinks.classList.add('active');
+            hamburger.classList.add('active');
+            closeMenu.classList.add('active');
+        });
+    }
+
+    if (closeMenu) {
+        closeMenu.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            closeMenu.classList.remove('active');
         });
     }
 
@@ -14,9 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const navItems = document.querySelectorAll('.nav-links a');
     navItems.forEach(item => {
         item.addEventListener('click', () => {
-            if (hamburger.classList.contains('active')) {
-                hamburger.classList.remove('active');
+            if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+                closeMenu.classList.remove('active');
             }
         });
     });
