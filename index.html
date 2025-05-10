@@ -19,7 +19,7 @@
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#">Products</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li class="mobile-only"><a href="#" class="download-catalog-mobile">Download Catalog</a></li>
                 </ul>
             </nav>
@@ -199,6 +199,47 @@
         </div>
     </section>
 
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Export Avenue, Business District</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@globalexport.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Enter message subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment-alt"></i> Message</label>
+                            <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -248,5 +289,55 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Contact form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.querySelector('.contact-form form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Here you would typically send the data to your server
+                    // For now, we'll just show a success message
+                    contactForm.innerHTML = `
+                        <div class="form-success">
+                            <h3>Thank You!</h3>
+                            <p>Your message has been sent successfully. We will get back to you soon.</p>
+                        </div>
+                    `;
+                    
+                    // Reset the form after 5 seconds (optional)
+                    setTimeout(() => {
+                        contactForm.reset();
+                        contactForm.innerHTML = `
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Enter message subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message"><i class="fas fa-comment-alt"></i> Message</label>
+                                <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        `;
+                    }, 5000);
+                });
+            }
+        });
+    </script>
 </body>
 </html> 
