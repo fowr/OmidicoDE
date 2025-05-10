@@ -401,6 +401,9 @@ nav {
         transform: translateX(calc(-230px * 6)); /* adjust based on logo count and size */
     }
 }
+.logo a img {
+    max-width: 25%
+}
 
 /* Pause animation on hover */
 .logo-container:hover .logo-scroll {
@@ -814,6 +817,18 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 1124px) and (min-width: 769px) {
+    .download-catalog-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 1124px) and (min-width: 769px) {
+    .download-catalog-btn {
+        display: none;
+    }
+}
+
 @media (max-width: 992px) {
     .hero-content h1 {
         font-size: 2.8rem;
@@ -963,6 +978,9 @@ footer {
 }
 
 @media (max-width: 576px) {
+    .logo a img{
+        max-width: 50% ;
+    }
     .counter-grid {
         grid-template-columns: 1fr;
     }
@@ -1000,4 +1018,33 @@ footer {
 
 .mobile-only {
     display: none;
+}
+
+.lang-toggle-btn {
+    background: #fff;
+    color: var(--dark-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 12px 18px;
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.lang-toggle-btn span {
+    font-weight: 400;
+    color: var(--dark-color);
+    transition: color 0.2s, font-weight 0.2s;
+}
+.lang-toggle-btn span.active {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.lang-toggle-btn:hover {
+    background: var(--light-color);
+    border-color: var(--secondary-color);
 } 

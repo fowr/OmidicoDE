@@ -12,7 +12,7 @@
     <header class="main-header">
         <div class="container">
             <div class="logo">
-                <a href="#"><img src="img/logo-omidicompany-bottom.png" alt="Omidicompany Logo" style="max-width: 25%;"></a>
+                <a href="#"><img src="img/logo-omidicompany-bottom.png" alt="Omidicompany Logo"></a>
             </div>
             <nav>
                 <ul class="nav-links">
@@ -24,7 +24,8 @@
                 </ul>
             </nav>
             <a href="#" class="download-catalog-btn">Download Catalog</a>
-            <div class="hamburger">
+            <button class="lang-toggle-btn" id="lang-toggle"><span class="lang-en active">EN</span> | <span class="lang-de">DE</span></button>
+            <div class="hamburger", style="padding: 12px;">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -290,54 +291,161 @@
 
     <script src="script.js"></script>
     <script>
-        // Contact form handling
-        document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.querySelector('.contact-form form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    // Get form values
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const subject = document.getElementById('subject').value;
-                    const message = document.getElementById('message').value;
-                    
-                    // Here you would typically send the data to your server
-                    // For now, we'll just show a success message
-                    contactForm.innerHTML = `
-                        <div class="form-success">
-                            <h3>Thank You!</h3>
-                            <p>Your message has been sent successfully. We will get back to you soon.</p>
-                        </div>
-                    `;
-                    
-                    // Reset the form after 5 seconds (optional)
-                    setTimeout(() => {
-                        contactForm.reset();
-                        contactForm.innerHTML = `
-                            <div class="form-group">
-                                <label for="name"><i class="fas fa-user"></i> Full Name</label>
-                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject"><i class="fas fa-tag"></i> Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="Enter message subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message"><i class="fas fa-comment-alt"></i> Message</label>
-                                <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        `;
-                    }, 5000);
-                });
-            }
-        });
+    // Language translations
+    const translations = {
+        en: {
+            downloadCatalog: "Download Catalog",
+            navHome: "Home",
+            navProducts: "Products",
+            navAbout: "About",
+            navContact: "Contact",
+            heroHeading: "Premium Cookie Factory Machinery",
+            heroDesc: "Delivering high-quality production equipment to cookie manufacturers worldwide",
+            heroBtn: "Explore Our Equipment",
+            sectionClients: "What Our Clients Say",
+            sectionFeedback: "CLIENT FEEDBACK",
+            sectionMachinery: "Our Premium Machinery",
+            sectionCounterCountries: "Countries Supplied",
+            sectionCounterFactories: "Factories Equipped",
+            sectionCounterTypes: "Machine Types",
+            sectionLogos: "Our Cookie Industry Clients",
+            sectionCarousel: "Maid By Our Machinery",
+            sectionTestimonials: "What Our Clients Say",
+            sectionCTA: "Upgrade Your Cookie Production Line",
+            sectionCTADesc: "Join leading cookie manufacturers worldwide with our state-of-the-art machinery",
+            sectionContact: "Get In Touch",
+            contactInfo: "Contact Information",
+            contactName: "Full Name",
+            contactEmail: "Email Address",
+            contactSubject: "Subject",
+            contactMessage: "Message",
+            contactSend: "Send Message",
+            contactPlaceholderName: "Enter your full name",
+            contactPlaceholderEmail: "Enter your email address",
+            contactPlaceholderSubject: "Enter message subject",
+            contactPlaceholderMessage: "Type your message here..."
+        },
+        de: {
+            downloadCatalog: "Katalog herunterladen",
+            navHome: "Startseite",
+            navProducts: "Produkte",
+            navAbout: "Über uns",
+            navContact: "Kontakt",
+            heroHeading: "Premium Maschinen für Keksfabriken",
+            heroDesc: "Wir liefern hochwertige Produktionsanlagen an Kekshersteller weltweit",
+            heroBtn: "Unsere Maschinen entdecken",
+            sectionClients: "Was unsere Kunden sagen",
+            sectionFeedback: "KUNDENFEEDBACK",
+            sectionMachinery: "Unsere Premium-Maschinen",
+            sectionCounterCountries: "Gelieferte Länder",
+            sectionCounterFactories: "Ausgestattete Fabriken",
+            sectionCounterTypes: "Maschinentypen",
+            sectionLogos: "Unsere Kunden aus der Keksindustrie",
+            sectionCarousel: "Hergestellt mit unseren Maschinen",
+            sectionTestimonials: "Was unsere Kunden sagen",
+            sectionCTA: "Modernisieren Sie Ihre Keksproduktion",
+            sectionCTADesc: "Schließen Sie sich führenden Keksherstellern weltweit mit unseren hochmodernen Maschinen an",
+            sectionContact: "Kontakt aufnehmen",
+            contactInfo: "Kontaktinformation",
+            contactName: "Vollständiger Name",
+            contactEmail: "E-Mail-Adresse",
+            contactSubject: "Betreff",
+            contactMessage: "Nachricht",
+            contactSend: "Nachricht senden",
+            contactPlaceholderName: "Geben Sie Ihren vollständigen Namen ein",
+            contactPlaceholderEmail: "Geben Sie Ihre E-Mail-Adresse ein",
+            contactPlaceholderSubject: "Betreff der Nachricht eingeben",
+            contactPlaceholderMessage: "Geben Sie hier Ihre Nachricht ein..."
+        }
+    };
+
+    function setLanguage(lang) {
+        localStorage.setItem('siteLang', lang);
+        const t = translations[lang];
+        // Header
+        document.querySelector('.download-catalog-btn').textContent = t.downloadCatalog;
+        document.querySelectorAll('.nav-links li a')[0].textContent = t.navHome;
+        document.querySelectorAll('.nav-links li a')[1].textContent = t.navProducts;
+        document.querySelectorAll('.nav-links li a')[2].textContent = t.navAbout;
+        document.querySelectorAll('.nav-links li a')[3].textContent = t.navContact;
+        // Hero section
+        const heroHeading = document.querySelector('.hero-content h1');
+        const heroDesc = document.querySelector('.hero-content p');
+        const heroBtn = document.querySelector('.hero-content .btn');
+        if(heroHeading) heroHeading.textContent = t.heroHeading;
+        if(heroDesc) heroDesc.textContent = t.heroDesc;
+        if(heroBtn) heroBtn.textContent = t.heroBtn;
+        // Section titles
+        const sectionTitles = document.querySelectorAll('.section-title');
+        if(sectionTitles[0]) sectionTitles[0].textContent = t.sectionClients;
+        if(sectionTitles[1]) sectionTitles[1].textContent = t.sectionMachinery;
+        if(sectionTitles[2]) sectionTitles[2].textContent = t.sectionCarousel;
+        if(sectionTitles[3]) sectionTitles[3].textContent = t.sectionTestimonials;
+        if(sectionTitles[4]) sectionTitles[4].textContent = t.sectionContact;
+        // Counter section
+        const counters = document.querySelectorAll('.counter-item p');
+        if(counters[0]) counters[0].textContent = t.sectionCounterCountries;
+        if(counters[1]) counters[1].textContent = t.sectionCounterFactories;
+        if(counters[2]) counters[2].textContent = t.sectionCounterTypes;
+        // Customer logos
+        const logosTitle = document.querySelector('.customer-logos .section-title');
+        if(logosTitle) logosTitle.textContent = t.sectionLogos;
+        // CTA
+        const ctaTitle = document.querySelector('.cta-content h2');
+        const ctaDesc = document.querySelector('.cta-content p');
+        if(ctaTitle) ctaTitle.textContent = t.sectionCTA;
+        if(ctaDesc) ctaDesc.textContent = t.sectionCTADesc;
+        // Contact section
+        const contactTitle = document.querySelector('.contact-section .section-title');
+        if(contactTitle) contactTitle.textContent = t.sectionContact;
+        const contactInfo = document.querySelector('.contact-info h3');
+        if(contactInfo) contactInfo.textContent = t.contactInfo;
+        // Contact form labels and placeholders
+        const nameLabel = document.querySelector('label[for="name"]');
+        const emailLabel = document.querySelector('label[for="email"]');
+        const subjectLabel = document.querySelector('label[for="subject"]');
+        const messageLabel = document.querySelector('label[for="message"]');
+        if(nameLabel) nameLabel.childNodes[1].nodeValue = ' ' + t.contactName;
+        if(emailLabel) emailLabel.childNodes[1].nodeValue = ' ' + t.contactEmail;
+        if(subjectLabel) subjectLabel.childNodes[1].nodeValue = ' ' + t.contactSubject;
+        if(messageLabel) messageLabel.childNodes[1].nodeValue = ' ' + t.contactMessage;
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const subjectInput = document.getElementById('subject');
+        const messageInput = document.getElementById('message');
+        if(nameInput) nameInput.placeholder = t.contactPlaceholderName;
+        if(emailInput) emailInput.placeholder = t.contactPlaceholderEmail;
+        if(subjectInput) subjectInput.placeholder = t.contactPlaceholderSubject;
+        if(messageInput) messageInput.placeholder = t.contactPlaceholderMessage;
+        // Contact form button
+        const sendBtn = document.querySelector('.contact-form button[type="submit"]');
+        if(sendBtn) sendBtn.textContent = t.contactSend;
+        // Download catalog mobile
+        const downloadMobile = document.querySelector('.download-catalog-mobile');
+        if(downloadMobile) downloadMobile.textContent = t.downloadCatalog;
+        // Toggle button label and highlight
+        const langEn = document.querySelector('.lang-toggle-btn .lang-en');
+        const langDe = document.querySelector('.lang-toggle-btn .lang-de');
+        if(lang === 'en') {
+            langEn.classList.add('active');
+            langDe.classList.remove('active');
+        } else {
+            langEn.classList.remove('active');
+            langDe.classList.add('active');
+        }
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', function() {
+        const current = localStorage.getItem('siteLang') || 'en';
+        const next = current === 'en' ? 'de' : 'en';
+        setLanguage(next);
+    });
+
+    // On page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const lang = localStorage.getItem('siteLang') || 'en';
+        setLanguage(lang);
+    });
     </script>
 </body>
 </html> 
