@@ -70,54 +70,70 @@
             </div>
         </div>
     </section>
-<!-- 
+
     <section class="customer-logos">
-        <div class="container">
-            <h2 class="section-title">Our Cookie Industry Clients</h2>
-            <div class="logo-container">
-                <div class="logo-scroll">
-                    <div class="logo-item">
-                        <img src="img/logo-omidicompany-bottom.png" alt="Customer Logo 1">
-                    </div>
-                    <div class="logo-item">
-                        <img src="img/download1.png" alt="Galileo">
-                    </div>
-                    <div class="logo-item">
-                        <img src="img/download3.png" alt="Segment">
-                    </div>
-                    <div class="logo-item">
-                        <img src="img/download1.png" alt="Layers">
-                    </div>
-                    <div class="logo-item">
-                        <img src="img/download3.png" alt="Sisyphus">
-                    </div>
-                    <div class="logo-item">
-                        <img src="img/download1.png" alt="FeatherDev">
-                    </div>
-                    Duplicate logos for seamless scrolling 
-                    <div class="logo-item">
-                        <img src="img/logo-omidicompany-bottom.png" alt="Customer Logo 1">
-                    </div>
-                    <div class="logo-item">
-                        <img src="img/download1.png" alt="Galileo">
-                    </div>
-                    <div class="logo-item">
-                        <img src="img/download3.png" alt="Segment">
-                    </div>
-                    <div class="logo-item">
-                        <img src="img/download1.png" alt="Layers">
-                    </div>
-                    <div class="logo-item">
-                        <img src="img/download3.jpg" alt="Sisyphus">
-                    </div>
-                    <div class="logo-item">
-                        <img src="img/download1.png" alt="FeatherDev">
-                    </div>
+    <div class="container">
+        <h2 class="section-title">Our Products</h2>
+        <div class="logo-container">
+            <div class="logo-scroll">
+                <!-- Cookie Products -->
+                <div class="logo-item">
+                    <a href="products.html">
+                        <img src="img/machinery/cookie/OM6N-2.png" alt="Cookie Machine OM6N-2">
+                    </a>
+                </div>
+                <div class="logo-item">
+                    <a href="products.html">
+                        <img src="img/machinery/cookie/OM8N-1.png" alt="Cookie Machine OM8N-1">
+                    </a>
+                </div>
+                <div class="logo-item">
+                    <a href="products.html">
+                        <img src="img/machinery/cookie/OM10N-1.png" alt="Cookie Machine OM10N-1">
+                    </a>
+                </div>
+                <div class="logo-item">
+                    <a href="products.html">
+                        <img src="img/machinery/cookie/OM20N-1.png" alt="Cookie Machine OM20N-1">
+                    </a>
+                </div>
+                <!-- Cake Products -->
+                <div class="logo-item">
+                    <a href="products.html">
+                        <img src="img/machinery/cake/Choco-Pie1.png" alt="Choco Pie Machine">
+                    </a>
+                </div>
+                <div class="logo-item">
+                    <a href="products.html">
+                        <img src="img/machinery/cake/Cup-cake-1.png" alt="Cupcake Machine">
+                    </a>
+                </div>
+                <!-- Duplicate items for seamless scrolling -->
+                <div class="logo-item">
+                    <a href="products.html">
+                        <img src="img/machinery/cake/Dry-Cake-1.png" alt="Dry Cake Machine">
+                    </a>
+                </div>
+                <div class="logo-item">
+                    <a href="products.html">
+                        <img src="img/machinery/cake/Layer-Cake-1.png" alt="Layer Cake Machine">
+                    </a>
+                </div>
+                <!-- Enrober Products -->
+                <div class="logo-item">
+                    <a href="products.html">
+                        <img src="img/machinery/enrober/Bars-2.png" alt="Enrober Bars Machine">
+                    </a>
+                </div>
+                <div class="logo-item">
+                    <a href="products.html">
+                        <img src="img/machinery/enrober/chcolate-enrober-1.png" alt="Chocolate Enrober Machine">
+                    </a>
                 </div>
             </div>
         </div>
-    </section> -->
-
+    </div>
+</section>
     <section class="carousel-section">
         <div class="container">
             <h2 class="section-title">Maid By Our Machinery</h2>
@@ -302,15 +318,15 @@
             heroHeading: "Manifacturer of Food Processing Machinery",
             heroDesc: "Designer & Manifacturer of Premium Food Processing Machinery worldwide",
             heroBtn: "Explore Our Equipment",
-            sectionClients: "What Our Clients Say",
+            sectionClients: "Maid By Our Machinery",
             sectionFeedback: "CLIENT FEEDBACK",
             sectionMachinery: "Maid By Our Machinery",
             sectionCounterCountries: "Countries Supplied",
             sectionCounterFactories: "Factories Equipped",
             sectionCounterTypes: "Machine Types",
-            sectionLogos: "Our Cookie Industry Clients",
-            sectionCarousel: "What Our Clients Say",
-            sectionTestimonials: "What Our Clients Say",
+            sectionLogos: "Our Food Industry Machinery",
+            sectionCarousel: "Maid By Our Machinery",
+            // sectionTestimonials: "What Our Clients Say",
             sectionCTA: "Upgrade Your Cookie Production Line",
             sectionCTADesc: "Join leading cookie manufacturers worldwide with our state-of-the-art machinery",
             sectionContact: "Get In Touch",
@@ -377,8 +393,8 @@
         if(heroBtn) heroBtn.textContent = t.heroBtn;
         // Section titles
         const sectionTitles = document.querySelectorAll('.section-title');
-        if(sectionTitles[0]) sectionTitles[0].textContent = t.sectionClients;
-        if(sectionTitles[1]) sectionTitles[1].textContent = t.sectionMachinery;
+        if(sectionTitles[0]) sectionTitles[0].textContent = t.sectionMachinery;
+        // if(sectionTitles[1]) sectionTitles[1].textContent = t.sectionMachinery;
         if(sectionTitles[2]) sectionTitles[2].textContent = t.sectionCarousel;
         if(sectionTitles[3]) sectionTitles[3].textContent = t.sectionTestimonials;
         if(sectionTitles[4]) sectionTitles[4].textContent = t.sectionContact;
