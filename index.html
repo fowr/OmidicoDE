@@ -279,17 +279,17 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Products</a></li>
                         <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Products</h4>
                     <ul>
-                        <li><a href="#">Mixers & Blenders</a></li>
-                        <li><a href="#">Dough Processing</a></li>
-                        <li><a href="#">Baking Ovens</a></li>
-                        <li><a href="#">Cooling Systems</a></li>
-                        <li><a href="#">Packaging Equipment</a></li>
+                        <li><a href="./products.html">Mixers & Blenders</a></li>
+                        <li><a href="./products.html">Dough Processing</a></li>
+                        <li><a href="./products.html">Baking Ovens</a></li>
+                        <li><a href="./products.html">Cooling Systems</a></li>
+                        <li><a href="./products.html">Packaging Equipment</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -356,7 +356,7 @@
             sectionCounterCountries: "Gelieferte Länder",
             sectionCounterFactories: "Ausgestattete Fabriken",
             sectionCounterTypes: "Maschinentypen",
-            sectionLogos: "Unsere Kunden aus der Keksindustrie",
+            sectionLogos: "Unsere Maschinen für die Lebensmittelindustrie",
             sectionCarousel: "Hergestellt mit unseren Maschinen",
             sectionTestimonials: "Was unsere Kunden sagen",
             sectionCTA: "Modernisieren Sie Ihre Keksproduktion",
@@ -394,7 +394,7 @@
         // Section titles
         const sectionTitles = document.querySelectorAll('.section-title');
         if(sectionTitles[0]) sectionTitles[0].textContent = t.sectionMachinery;
-        // if(sectionTitles[1]) sectionTitles[1].textContent = t.sectionMachinery;
+        if(sectionTitles[1]) sectionTitles[1].textContent = t.sectionMachinery;
         if(sectionTitles[2]) sectionTitles[2].textContent = t.sectionCarousel;
         if(sectionTitles[3]) sectionTitles[3].textContent = t.sectionTestimonials;
         if(sectionTitles[4]) sectionTitles[4].textContent = t.sectionContact;

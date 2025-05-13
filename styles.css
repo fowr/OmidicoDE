@@ -1050,7 +1050,7 @@ footer {
 
 /* Products Section Styles */
 .products-section {
-    padding: 100px 0;
+    padding: 50px 0;
     background-color: #f8fafc;
 }
 
@@ -1058,6 +1058,8 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    padding-top: 50px;
+
 }
 
 .category-tabs {
