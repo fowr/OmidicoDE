@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Omidi Industrial Machinery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional Styles for About Page */
+        .about-hero {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+            text-align: center;
+        }
+        /* .about-intro {
+            padding: 60px 0;
+        } */
+        .about-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+        .about-section:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .about-content h2 {
+            margin-bottom: 25px;
+            color: #222;
+            font-size: 32px;
+        }
+        .about-content p {
+            margin-bottom: 20px;
+            line-height: 1.7;
+            color: #555;
+        }
+        .about-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .about-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            color: #555;
+        }
+        .about-list li:before {
+            content: "\f00c";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #ff6b6b;
+        }
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .location-item {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .location-item:hover {
+            transform: translateY(-5px);
+        }
+        .location-item i {
+            font-size: 36px;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+        .location-item h4 {
+            margin-bottom: 10px;
+            color: #222;
+        }
+        .counter-grid {
+            margin: 60px 0 40px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+        @media (max-width: 992px) {
+        .counter-section {
+        margin-top: 0;
+    }}
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-omidicompany-bottom.png" alt="Omidicompany Logo"></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="mobile-only"><a href="#" class="download-catalog-mobile">Download Catalog</a></li>
+                </ul>
+            </nav>
+            <a href="https://omidico.com/newupt/catalog2025.pdf" class="download-catalog-btn">Download Catalog</a>
+            <button class="lang-toggle-btn" id="lang-toggle"><span class="lang-en active">EN</span> | <span class="lang-de">DE</span></button>
+            <div class="hamburger" style="padding: 12px;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1 id="about-hero-title">About Omidi Industrial Machinery</h1>
+            <p id="about-hero-desc">Innovative Solutions for the Global Food Industry Since 1990</p>
+        </div>
+    </section>
+
+    <section class="about-intro">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="./img/directors.png" alt="Omidi Factory">
+                </div>
+                <div class="about-content">
+                    <h2 id="intro-title">Introduction</h2>
+                    <p id="intro-text">With over 30 years of expertise, Omidi Industrial Machinery is a trusted manufacturer of food processing machinery and equipment. We proudly serve over 800 domestic clients and export to more than 68 countries worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 id="strengths-title">Our Strengths</h2>
+                    <ul class="about-list" id="strengths-list">
+                        <li>300 professional staff</li>
+                        <li>A fully roofed 35,000 sqm factory</li>
+                        <li>Certified to CE and ISO standards</li>
+                        <li>Advanced manufacturing using state-of-the-art technology</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="./img/strength.png" alt="Omidi Staff Working">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <h2 id="offer-title" class="section-title" style="margin-bottom: 30px;">What We Offer</h2>
+            <p id="offer-intro">We provide complete turnkey production lines – both automatic and semi-automatic – tailored to your product, capacity, and available space. Our solutions include:</p>
+            
+            <div class="counter-section">
+                <div class="container">
+                    <div class="counter-grid">
+                        <div class="counter-item">
+                            <i class="fas fa-globe"></i>
+                            <h2 class="counter" data-target="68">0</h2>
+                            <p id="counter-countries">Countries Supplied</p>
+                        </div>
+                        <div class="counter-item">
+                            <i class="fas fa-industry"></i>
+                            <h2 class="counter" data-target="800">0</h2>
+                            <p id="counter-clients">Domestic Clients</p>
+                        </div>
+                        <div class="counter-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h2 class="counter" data-target="30">0</h2>
+                            <p id="counter-years">Years of Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="./img/world.png" alt="Omidi Production Line">
+                </div>
+                <div class="about-content">
+                    <ul class="about-list" id="products-list">
+                        <li>Encrusted cookies and bars (variety of shapes and fillings)</li>
+                        <li>Layer cakes and roll cakes</li>
+                        <li>Cupcakes and muffins</li>
+                        <li>Choco pies</li>
+                        <li>Hard and soft biscuits</li>
+                        <li>Chocolate enrobing lines</li>
+                        <li>Individual machinery</li>
+                        <li>Vertical mixers</li>
+                        <li>Tunnel ovens</li>
+                        <li>Spiral coolers</li>
+                        <li>Customized conveyors and automation systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 id="why-title">Why Choose Omidi?</h2>
+                    <ul class="about-list" id="why-list">
+                        <li>Experienced engineering team</li>
+                        <li>Efficient, high-capacity line design</li>
+                        <li>Customized layouts to fit your space and target output</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="./img/rewards.png" alt="Omidi Engineering Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <h2 id="global-title" class="section-title" style="margin-bottom: 40px;">Global Presence</h2>
+            <p id="global-text">With regional offices in Turkey, the United Arab Emirates, and Germany, Omidi provides reliable, localized service to clients across the globe.</p>
+            
+            <div class="location-grid">
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Turkey</h4>
+                    <p id="turkey-office">Regional Office - Istanbul</p>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>United Arab Emirates</h4>
+                    <p id="uae-office">Regional Office - Dubai</p>
+                </div>
+                <div class="location-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Germany</h4>
+                    <p id="germany-office">Regional Office - Berlin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 id="cta-title">Ready to Upgrade Your Production Line?</h2>
+                <p id="cta-desc">Contact us today to discuss your specific requirements and discover our tailored solutions</p>
+                <a href="https://omidico.com/newupt/catalog2025.pdf" class="btn btn-light" id="cta-btn">Download Catalog</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title" id="contact-title" style="margin-bottom: 40px;">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 id="contact-info-title">Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 3rd km of Langroud-Lahijan Road, Lahijan, Gilan, Omidi Machinery Manufacturing</p>
+                    <p><i class="fas fa-phone"></i> +98 (911) 143-8779</p>
+                    <p><i class="fas fa-envelope"></i> salesgroup@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="http://wa.me/989111438779"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/channel/UC2E5PjXeGzt-1gdfLmwn53A"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:omidico.salesgroup@gmail.com"><i class="fa fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/omidi_industrial_machinery/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> <span id="form-name">Full Name</span></label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> <span id="form-email">Email Address</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> <span id="form-subject">Subject</span></label>
+                            <input type="text" id="subject" name="subject" placeholder="Enter message subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment-alt"></i> <span id="form-message">Message</span></label>
+                            <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="img/logo-omidicompany-bottom.png" alt="Omidicompany Logo">
+                    </div>
+                    <p>Providing high-quality food machinery to global manufacturers since 1990.</p>
+                    <div class="social-icons">
+                        <a href="http://wa.me/989111438779"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/channel/UC2E5PjXeGzt-1gdfLmwn53A"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:omidico.salesgroup@gmail.com"><i class="fa fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/omidi_industrial_machinery/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="products.html">Mixers & Blenders</a></li>
+                        <li><a href="products.html">Dough Processing</a></li>
+                        <li><a href="products.html">Baking Ovens</a></li>
+                        <li><a href="products.html">Cooling Systems</a></li>
+                        <li><a href="products.html">Packaging Equipment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 3rd km of Langroud-Lahijan Road, Lahijan, Gilan, Omidi Machinery Manufacturing</p>
+                    <p><i class="fas fa-phone"></i> +98 (911) 143-8779</p>
+                    <p><i class="fas fa-envelope"></i> salesgroup@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Omidi Industrial Machinery. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const inc = target / speed;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
+    });
+
+    // Language translations
+    const translations = {
+        en: {
+            // Header
+            downloadCatalog: "Download Catalog",
+            navHome: "Home",
+            navProducts: "Products",
+            navAbout: "About",
+            navContact: "Contact",
+            
+            // Hero
+            aboutHeroTitle: "About Omidi Industrial Machinery",
+            aboutHeroDesc: "Innovative Solutions for the Global Food Industry Since 1990",
+            
+            // Intro
+            introTitle: "Introduction",
+            introText: "With over 30 years of expertise, Omidi Industrial Machinery is a trusted manufacturer of food processing machinery and equipment. We proudly serve over 800 domestic clients and export to more than 68 countries worldwide.",
+            
+            // Strengths
+            strengthsTitle: "Our Strengths",
+            strengthsList: [
+                "300 professional staff",
+                "A fully roofed 35,000 sqm factory",
+                "Certified to CE and ISO standards",
+                "Advanced manufacturing using state-of-the-art technology"
+            ],
+            
+            // Offerings
+            offerTitle: "What We Offer",
+            offerIntro: "We provide complete turnkey production lines – both automatic and semi-automatic – tailored to your product, capacity, and available space. Our solutions include:",
+            productsList: [
+                "Encrusted cookies and bars (variety of shapes and fillings)",
+                "Layer cakes and roll cakes",
+                "Cupcakes and muffins",
+                "Choco pies",
+                "Hard and soft biscuits",
+                "Chocolate enrobing lines",
+                "Individual machinery",
+                "Vertical mixers",
+                "Tunnel ovens",
+                "Spiral coolers",
+                "Customized conveyors and automation systems"
+            ],
+            
+            // Counters
+            counterCountries: "Countries Supplied",
+            counterClients: "Domestic Clients",
+            counterYears: "Years of Experience",
+            
+            // Why Choose
+            whyTitle: "Why Choose Omidi?",
+            whyList: [
+                "Experienced engineering team",
+                "Efficient, high-capacity line design",
+                "Customized layouts to fit your space and target output"
+            ],
+            
+            // Global Presence
+            globalTitle: "Global Presence",
+            globalText: "With regional offices in Turkey, the United Arab Emirates, and Germany, Omidi provides reliable, localized service to clients across the globe.",
+            turkeyOffice: "Regional Office - Istanbul",
+            uaeOffice: "Regional Office - Dubai",
+            germanyOffice: "Regional Office - Berlin",
+            
+            // CTA
+            ctaTitle: "Ready to Upgrade Your Production Line?",
+            ctaDesc: "Contact us today to discuss your specific requirements and discover our tailored solutions",
+            ctaBtn: "Download Catalog",
+            
+            // Contact
+            contactTitle: "Get In Touch",
+            contactInfoTitle: "Contact Information",
+            formName: "Full Name",
+            formEmail: "Email Address",
+            formSubject: "Subject",
+            formMessage: "Message",
+            formSubmit: "Send Message"
+        },
+        de: {
+            // Header
+            downloadCatalog: "Katalog herunterladen",
+            navHome: "Startseite",
+            navProducts: "Produkte",
+            navAbout: "Über uns",
+            navContact: "Kontakt",
+            
+            // Hero
+            aboutHeroTitle: "Über Omidi Industrial Machinery",
+            aboutHeroDesc: "Innovative Lösungen für die globale Lebensmittelindustrie seit 1990",
+            
+            // Intro
+            introTitle: "Einleitung",
+            introText: "Mit über 30 Jahren Erfahrung ist Omidi Industrial Machinery ein vertrauenswürdiger Hersteller von Maschinen und Anlagen für die Lebensmittelverarbeitung. Wir beliefern über 800 Kunden im Inland und exportieren in mehr als 68 Länder weltweit.",
+            
+            // Strengths
+            strengthsTitle: "Unsere Stärken",
+            strengthsList: [
+                "300 professionelle Mitarbeiter",
+                "Eine vollständig überdachte Produktionsfläche von 35.000 m²",
+                "Zertifiziert nach CE- und ISO-Standards",
+                "Fortschrittliche Fertigung mit modernster Technologie"
+            ],
+            
+            // Offerings
+            offerTitle: "Unser Angebot",
+            offerIntro: "Wir bieten komplette schlüsselfertige Produktionslinien – automatisch oder halbautomatisch – maßgeschneidert auf Ihr Produkt, Ihre Kapazität und Ihren verfügbaren Platz. Unsere Lösungen umfassen:",
+            productsList: [
+                "Gefüllte Kekse und Riegel (verschiedene Formen und Füllungen)",
+                "Schichtkuchen und Biskuitrollen",
+                "Cupcakes und Muffins",
+                "Choco Pies",
+                "Harte und weiche Kekse",
+                "Schokoladenüberzugsanlagen",
+                "Einzelmaschinen",
+                "Vertikalmischer",
+                "Tunnelöfen",
+                "Spiralkühler",
+                "Maßgeschneiderte Förderbänder und Automatisierungssysteme"
+            ],
+            
+            // Counters
+            counterCountries: "Gelieferte Länder",
+            counterClients: "Inländische Kunden",
+            counterYears: "Jahre Erfahrung",
+            
+            // Why Choose
+            whyTitle: "Warum Omidi?",
+            whyList: [
+                "Erfahrenes Ingenieurteam",
+                "Effizientes Design für Hochleistungslinien",
+                "Individuell angepasste Layouts für Ihren Raum und Ihre Produktionsziele"
+            ],
+            
+            // Global Presence
+            globalTitle: "Weltweite Präsenz",
+            globalText: "Mit regionalen Niederlassungen in der Türkei, den Vereinigten Arabischen Emiraten und Deutschland bietet Omidi zuverlässigen, lokalisierten Service für Kunden weltweit.",
+            turkeyOffice: "Regionalbüro - Istanbul",
+            uaeOffice: "Regionalbüro - Dubai",
+            germanyOffice: "Regionalbüro - Berlin",
+            
+            // CTA
+            ctaTitle: "Bereit, Ihre Produktionslinie zu verbessern?",
+            ctaDesc: "Kontaktieren Sie uns noch heute, um Ihre spezifischen Anforderungen zu besprechen und unsere maßgeschneiderten Lösungen zu entdecken",
+            ctaBtn: "Katalog herunterladen",
+            
+            // Contact
+            contactTitle: "Kontakt aufnehmen",
+            contactInfoTitle: "Kontaktinformationen",
+            formName: "Vollständiger Name",
+            formEmail: "E-Mail-Adresse",
+            formSubject: "Betreff",
+            formMessage: "Nachricht",
+            formSubmit: "Nachricht senden"
+        }
+    };
+
+    function setLanguage(lang) {
+        localStorage.setItem('siteLang', lang);
+        const t = translations[lang];
+        
+        // Header
+        document.querySelector('.download-catalog-btn').textContent = t.downloadCatalog;
+        document.querySelectorAll('.nav-links li a')[0].textContent = t.navHome;
+        document.querySelectorAll('.nav-links li a')[1].textContent = t.navProducts;
+        document.querySelectorAll('.nav-links li a')[2].textContent = t.navAbout;
+        document.querySelectorAll('.nav-links li a')[3].textContent = t.navContact;
+        document.querySelector('.download-catalog-mobile').textContent = t.downloadCatalog;
+        
+        // Hero
+        document.getElementById('about-hero-title').textContent = t.aboutHeroTitle;
+        document.getElementById('about-hero-desc').textContent = t.aboutHeroDesc;
+        
+        // Intro
+        document.getElementById('intro-title').textContent = t.introTitle;
+        document.getElementById('intro-text').textContent = t.introText;
+        
+        // Strengths
+        document.getElementById('strengths-title').textContent = t.strengthsTitle;
+        const strengthsList = document.getElementById('strengths-list');
+        strengthsList.innerHTML = '';
+        t.strengthsList.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            strengthsList.appendChild(li);
+        });
+        
+        // Offerings
+        document.getElementById('offer-title').textContent = t.offerTitle;
+        document.getElementById('offer-intro').textContent = t.offerIntro;
+        const productsList = document.getElementById('products-list');
+        productsList.innerHTML = '';
+        t.productsList.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            productsList.appendChild(li);
+        });
+        
+        // Counters
+        document.getElementById('counter-countries').textContent = t.counterCountries;
+        document.getElementById('counter-clients').textContent = t.counterClients;
+        document.getElementById('counter-years').textContent = t.counterYears;
+        
+        // Why Choose
+        document.getElementById('why-title').textContent = t.whyTitle;
+        const whyList = document.getElementById('why-list');
+        whyList.innerHTML = '';
+        t.whyList.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            whyList.appendChild(li);
+        });
+        
+        // Global Presence
+        document.getElementById('global-title').textContent = t.globalTitle;
+        document.getElementById('global-text').textContent = t.globalText;
+        document.getElementById('turkey-office').textContent = t.turkeyOffice;
+        document.getElementById('uae-office').textContent = t.uaeOffice;
+        document.getElementById('germany-office').textContent = t.germanyOffice;
+        
+        // CTA
+        document.getElementById('cta-title').textContent = t.ctaTitle;
+        document.getElementById('cta-desc').textContent = t.ctaDesc;
+        document.getElementById('cta-btn').textContent = t.ctaBtn;
+        
+        // Contact
+        document.getElementById('contact-title').textContent = t.contactTitle;
+        document.getElementById('contact-info-title').textContent = t.contactInfoTitle;
+        document.getElementById('form-name').textContent = t.formName;
+        document.getElementById('form-email').textContent = t.formEmail;
+        document.getElementById('form-subject').textContent = t.formSubject;
+        document.getElementById('form-message').textContent = t.formMessage;
+        document.getElementById('form-submit').textContent = t.formSubmit;
+        
+        // Toggle button label and highlight
+        const langEn = document.querySelector('.lang-toggle-btn .lang-en');
+        const langDe = document.querySelector('.lang-toggle-btn .lang-de');
+        if(lang === 'en') {
+            langEn.classList.add('active');
+            langDe.classList.remove('active');
+        } else {
+            langEn.classList.remove('active');
+            langDe.classList.add('active');
+        }
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', function() {
+        const current = localStorage.getItem('siteLang') || 'en';
+        const next = current === 'en' ? 'de' : 'en';
+        setLanguage(next);
+    });
+
+    // On page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const lang = localStorage.getItem('siteLang') || 'en';
+        setLanguage(lang);
+    });
+    </script>
+</body>
+</html>
