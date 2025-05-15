@@ -1584,7 +1584,10 @@ footer {
     .related-products {
         padding: 60px 0;
     }
-    
+    .product-detail-hero{
+        padding: 10px 0;
+    }
+
     .main-image {
         height: 350px;
     }
