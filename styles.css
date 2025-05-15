@@ -1623,7 +1623,7 @@ footer {
 
 @media (max-width: 576px) {
     .product-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     
     .breadcrumb-list {
