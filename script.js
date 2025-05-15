@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Counter Animation
     const counters = document.querySelectorAll('.counter');
-    const counterSpeed = 2000; // The lower the faster
+    const counterSpeed = 1000000; // The lower the faster
 
     // Start counter animation when user scrolls to counter section
     const counterSection = document.querySelector('.counter-section');
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (count < target) {
                     count += Math.ceil(increment);
                     counter.innerText = count.toLocaleString();
-                    setTimeout(updateCount, 1);
+                    setTimeout(updateCount, 2);
                 } else {
                     counter.innerText = target.toLocaleString();
                 }

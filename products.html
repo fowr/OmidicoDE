@@ -24,7 +24,9 @@
                 </ul>
             </nav>
             <a href="#" class="download-catalog-btn">Download Catalog</a>
-            <button class="lang-toggle-btn" id="lang-toggle"><span class="lang-en active">EN</span> | <span class="lang-de">DE</span></button>
+            <button class="lang-toggle-btn" id="lang-toggle">
+                <span class="lang-en active">EN</span> | <span class="lang-de">DE</span>
+              </button>
             <div class="hamburger", style="padding: 12px;">
                 <span></span>
                 <span></span>
@@ -195,20 +197,19 @@
                     </div>
                     <p>Providing high-quality food machinery to global manufacturers since 1990.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="http://wa.me/989111438779"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/channel/UC2E5PjXeGzt-1gdfLmwn53A"><i class="fab fa-youtube"></i></a>
+                        <a href="mailto:omidico.salesgroup@gmail.com"><i class="fa fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/omidi_industrial_machinery/?hl=en"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./products.html">Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -223,9 +224,9 @@
                 </div>
                 <div class="footer-column">
                     <h4>Contact Us</h4>
-                    <p><i class="fas fa-map-marker-alt"></i>Lahijan,  Gilan, Omidi Machinery Manufacturing</p>
-                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                    <p><i class="fas fa-envelope"></i> info@omidico.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 3rd km of Langroud-Lahijan Road, Lahijan,  Gilan, Omidi Machinery Manufacturing</p>
+                    <p><i class="fas fa-phone"></i> +98 (911) 143-8779</p>
+                    <p><i class="fas fa-envelope"></i> salesgroup@gmail.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -234,17 +235,259 @@
         </div>
     </footer>
 
-
-    <script src="./assets/js/script.js"></script>
+    <script src="./script.js"></script>
     <script>
+window.translations = {
+    en: {
+        // Header
+        home: "Home",
+        products: "Products",
+        about: "About",
+        contact: "Contact",
+        downloadCatalog: "Download Catalog",
+        
+        // Product section
+        productTitle: "Our Machinery Products",
+        allMachinery: "All Machinery",
+        cookieMachinery: "Cookie",
+        biscuitMachinery: "Biscuit",
+        cakeMachinery: "Cake",
+        enroberMachinery: "Enrober",
+        viewDetails: "View Details",
+        
+        // Product descriptions
+        cookie1Title: "OM6N-2 Cookie Machine",
+        cookie1Desc: "High-performance cookie production machine with capacity of up to 600kg/hr.",
+        cookie2Title: "OM8N-1 Cookie Machine",
+        cookie2Desc: "Advanced cookie forming and decorating system for medium scale production.",
+        cookie3Title: "OM10N-1 Cookie Machine",
+        cookie3Desc: "Heavy-duty cookie production line for large scale manufacturing with custom settings.",
+        cookie4Title: "OM20N-1 Cookie Machine",
+        cookie4Desc: "Industrial-grade cookie production system with fully automated processing.",
+        
+        biscuit1Title: "Biscuits-1 Production Line",
+        biscuit1Desc: "Complete biscuit manufacturing system with mixing, forming, baking and cooling.",
+        
+        cake1Title: "Choco-Pie Production Machine",
+        cake1Desc: "Specialized equipment for chocolate pie manufacturing with filling injection system.",
+        cake2Title: "Cup-cake Production Line",
+        cake2Desc: "Automated cupcake production system with batter depositing and decorating features.",
+        cake3Title: "Dry-Cake Machine",
+        cake3Desc: "Specialized equipment for traditional dry cake production with precision moisture control.",
+        cake4Title: "Layer-Cake Machine",
+        cake4Desc: "Multi-layer cake production system with automated layer stacking and coating.",
+        
+        enrober1Title: "Bars Enrobing Machine",
+        enrober1Desc: "High-precision chocolate enrobing system for bars and confectionery products.",
+        enrober2Title: "Chocolate Enrober Machine",
+        enrober2Desc: "Full-featured chocolate coating system with temperature control and decorating options.",
+        
+        // Footer
+        footerDesc: "Providing high-quality food machinery to global manufacturers since 1990.",
+        quickLinks: "Quick Links",
+        footerProducts: "Products",
+        footerContact: "Contact Us",
+        mixersBlenders: "Mixers & Blenders",
+        doughProcessing: "Dough Processing",
+        bakingOvens: "Baking Ovens",
+        coolingSystems: "Cooling Systems",
+        packagingEquipment: "Packaging Equipment",
+        copyright: "© 2025 Cookie Factory Machinery. All Rights Reserved."
+    },
+    de: {
+        // Header
+        home: "Startseite",
+        products: "Produkte",
+        about: "Über uns",
+        contact: "Kontakt",
+        downloadCatalog: "Katalog herunterladen",
+        
+        // Product section
+        productTitle: "Unsere Maschinenprodukte",
+        allMachinery: "Alle Maschinen",
+        cookieMachinery: "Keks",
+        biscuitMachinery: "Biskuit",
+        cakeMachinery: "Kuchen",
+        enroberMachinery: "Überzugsmaschine",
+        viewDetails: "Details anzeigen",
+        
+        // Product descriptions
+        cookie1Title: "OM6N-2 Keksmaschine",
+        cookie1Desc: "Hochleistungs-Keksproduktionsmaschine mit einer Kapazität von bis zu 600 kg/Std.",
+        cookie2Title: "OM8N-1 Keksmaschine",
+        cookie2Desc: "Fortschrittliches Keksform- und Dekorationssystem für die mittelgroße Produktion.",
+        cookie3Title: "OM10N-1 Keksmaschine",
+        cookie3Desc: "Heavy-Duty-Keksproduktionslinie für die Großserienproduktion mit benutzerdefinierten Einstellungen.",
+        cookie4Title: "OM20N-1 Keksmaschine",
+        cookie4Desc: "Industrielles Keksproduktionssystem mit vollautomatischer Verarbeitung.",
+        
+        biscuit1Title: "Biskuit-1 Produktionslinie",
+        biscuit1Desc: "Komplettes Biskuitherstellungssystem mit Mischen, Formen, Backen und Kühlen.",
+        
+        cake1Title: "Schoko-Kuchenproduktionsmaschine",
+        cake1Desc: "Spezialisierte Ausrüstung für die Herstellung von Schokoladenkuchen mit Fülleinspritzsystem.",
+        cake2Title: "Cupcake-Produktionslinie",
+        cake2Desc: "Automatisiertes Cupcake-Produktionssystem mit Teigdosier- und Dekorationsfunktionen.",
+        cake3Title: "Trockenkuchenmaschine",
+        cake3Desc: "Spezialisierte Ausrüstung für die traditionelle Trockenkuchenproduktion mit präziser Feuchtigkeitskontrolle.",
+        cake4Title: "Schichtkuchenmaschine",
+        cake4Desc: "Mehrschichtiges Kuchenproduktionssystem mit automatisiertem Schichtstapeln und Beschichten.",
+        
+        enrober1Title: "Riegel-Überzugsmaschine",
+        enrober1Desc: "Hochpräzises Schokoladenüberzugssystem für Riegel und Süßwarenprodukte.",
+        enrober2Title: "Schokoladen-Überzugsmaschine",
+        enrober2Desc: "Umfassendes Schokoladenbeschichtungssystem mit Temperaturregelung und Dekorationsoptionen.",
+        
+        // Footer
+        footerDesc: "Wir liefern hochwertige Lebensmittelmaschinen an globale Hersteller seit 1990.",
+        quickLinks: "Schnellzugriff",
+        footerProducts: "Produkte",
+        footerContact: "Kontaktieren Sie uns",
+        mixersBlenders: "Mixer & Mischer",
+        doughProcessing: "Teigverarbeitung",
+        bakingOvens: "Backöfen",
+        coolingSystems: "Kühlsysteme",
+        packagingEquipment: "Verpackungsanlagen",
+        copyright: "© 2025 Cookie Factory Machinery. Alle Rechte vorbehalten."
+    }
+};
 
-        // Product category filtering
-document.addEventListener('DOMContentLoaded', () => {
+// Make sure translations object is properly initialized
+if (!window.translations) {
+    console.error('Translations object is not defined. Initializing with defaults.');
+    window.translations = {
+        en: {
+            // Header
+            home: "Home",
+            products: "Products",
+            about: "About",
+            contact: "Contact",
+            downloadCatalog: "Download Catalog",
+            
+            // Product section
+            productTitle: "Our Machinery Products",
+            allMachinery: "All Machinery",
+            cookieMachinery: "Cookie",
+            biscuitMachinery: "Biscuit",
+            cakeMachinery: "Cake",
+            enroberMachinery: "Enrober",
+            viewDetails: "View Details",
+            
+            // Other English translations...
+        },
+        de: {
+            // Header
+            home: "Startseite",
+            products: "Produkte",
+            about: "Über uns",
+            contact: "Kontakt",
+            downloadCatalog: "Katalog herunterladen",
+            
+            // Product section
+            productTitle: "Unsere Maschinenprodukte",
+            allMachinery: "Alle Maschinen",
+            cookieMachinery: "Keks",
+            biscuitMachinery: "Biskuit",
+            cakeMachinery: "Kuchen",
+            enroberMachinery: "Überzugsmaschine",
+            viewDetails: "Details anzeigen",
+            
+            // Other German translations...
+        }
+    };
+}
+
+// Initialize the language
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing language settings');
+    console.log('Translations object:', window.translations);
+    
+    // Get the language from localStorage or default to English
+    const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+    
+    // Debug log
+    console.log('Current language set to:', currentLang);
+    
+    // Set active language in toggle button
+    const langEnSpan = document.querySelector('.lang-en');
+    const langDeSpan = document.querySelector('.lang-de');
+    
+    if (langEnSpan && langDeSpan) {
+        if (currentLang === 'en') {
+            langEnSpan.classList.add('active');
+            langDeSpan.classList.remove('active');
+        } else {
+            langDeSpan.classList.add('active');
+            langEnSpan.classList.remove('active');
+        }
+    } else {
+        console.error('Language toggle spans not found');
+    }
+    
+    // Call setLanguage after all checks
+    setLanguage(currentLang);
+    
+    // Set up toggle button functionality
+    const langToggleBtn = document.getElementById('lang-toggle');
+    if (langToggleBtn) {
+        // Find language spans inside the button
+        const langEnSpan = document.querySelector('.lang-en');
+        const langDeSpan = document.querySelector('.lang-de');
+        
+        // Direct click handlers for each language span
+        if (langEnSpan) {
+            langEnSpan.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('English language option clicked');
+                setLanguage('en');
+                if (langEnSpan && langDeSpan) {
+                    langEnSpan.classList.add('active');
+                    langDeSpan.classList.remove('active');
+                }
+            });
+        }
+        
+        if (langDeSpan) {
+            langDeSpan.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('German language option clicked');
+                setLanguage('de');
+                if (langEnSpan && langDeSpan) {
+                    langDeSpan.classList.add('active');
+                    langEnSpan.classList.remove('active');
+                }
+            });
+        }
+    } else {
+        console.error('Language toggle button not found');
+    }
+    
+    // Handle mobile menu
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const closeMenu = document.querySelector('.close-menu');
+    
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.add('active');
+            hamburger.style.display = 'none';
+            closeMenu.style.display = 'block';
+        });
+    }
+    
+    if (closeMenu) {
+        closeMenu.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            closeMenu.style.display = 'none';
+            hamburger.style.display = 'block';
+        });
+    }
+    
+    // Product category filtering
     const categoryTabs = document.querySelectorAll('.category-tab');
     const productCards = document.querySelectorAll('.product-card');
-    
-    // Initialize language translations for product section
-    updateProductSectionTranslations();
     
     if (categoryTabs.length > 0) {
         categoryTabs.forEach(tab => {
@@ -278,67 +521,181 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    
-    // Add translations for the product section
-    function updateProductSectionTranslations() {
-        // Add to the existing translations object in your script.js file
-        if (window.translations) {
-            // English translations
-            window.translations.en.productTitle = "Our Machinery Products";
-            window.translations.en.allMachinery = "All Machinery";
-            window.translations.en.cookieMachinery = "Cookie";
-            window.translations.en.biscuitMachinery = "Biscuit";
-            window.translations.en.cakeMachinery = "Cake";
-            window.translations.en.enroberMachinery = "Enrober";
-            window.translations.en.viewDetails = "View Details";
-            
-            // German translations
-            window.translations.de.productTitle = "Unsere Maschinen Produkte";
-            window.translations.de.allMachinery = "Alle Maschinen";
-            window.translations.de.cookieMachinery = "Keks";
-            window.translations.de.biscuitMachinery = "Biskuit";
-            window.translations.de.cakeMachinery = "Kuchen";
-            window.translations.de.enroberMachinery = "Überzugsmaschine";
-            window.translations.de.viewDetails = "Details anzeigen";
-        }
-    }
-    
-    // Extend existing setLanguage function to include product section
-    const originalSetLanguage = window.setLanguage;
-    if (originalSetLanguage) {
-        window.setLanguage = function(lang) {
-            // Call the original function first
-            originalSetLanguage(lang);
-            
-            // Update product section translations
-            const t = window.translations[lang];
-            
-            // Section title
-            const productTitle = document.querySelector('.products-section .section-title');
-            if (productTitle) productTitle.textContent = t.productTitle;
-            
-            // Category tabs
-            const allTab = document.querySelector('.category-tab[data-category="all"]');
-            const cookieTab = document.querySelector('.category-tab[data-category="cookie"]');
-            const biscuitTab = document.querySelector('.category-tab[data-category="biscuit"]');
-            const cakeTab = document.querySelector('.category-tab[data-category="cake"]');
-            const enroberTab = document.querySelector('.category-tab[data-category="enrober"]');
-            
-            if (allTab) allTab.textContent = t.allMachinery;
-            if (cookieTab) cookieTab.textContent = t.cookieMachinery;
-            if (biscuitTab) biscuitTab.textContent = t.biscuitMachinery;
-            if (cakeTab) cakeTab.textContent = t.cakeMachinery;
-            if (enroberTab) enroberTab.textContent = t.enroberMachinery;
-            
-            // View details buttons
-            const detailsButtons = document.querySelectorAll('.product-details-btn');
-            detailsButtons.forEach(btn => {
-                btn.textContent = t.viewDetails;
-            });
-        };
-    }
 });
 
+// Function to set the language
+function setLanguage(lang) {
+    console.log('Setting language to:', lang);
+    
+    // Save the language preference
+    localStorage.setItem('preferredLanguage', lang);
+    
+    // Check if translations exist
+    if (!window.translations || !window.translations[lang]) {
+        console.error('Translation not available for language:', lang);
+        return;
+    }
+    
+    // Get translation object for the selected language
+    const t = window.translations[lang];
+    console.log('Translation object loaded:', !!t);
+    
+    // Update header navigation
+    updateHeaderTranslations(t);
+    
+    // Update product section
+    updateProductSectionTranslations(t);
+    
+    // Update footer
+    updateFooterTranslations(t);
+}
+
+// Update header navigation translations
+function updateHeaderTranslations(t) {
+    // Nav links
+    const navLinks = document.querySelectorAll('.nav-links li a');
+    if (navLinks.length >= 4) {
+        navLinks[0].textContent = t.home;
+        navLinks[1].textContent = t.products;
+        navLinks[2].textContent = t.about;
+        navLinks[3].textContent = t.contact;
+    }
+    
+    // Download catalog buttons
+    const downloadBtns = document.querySelectorAll('.download-catalog-btn, .download-catalog-mobile');
+    downloadBtns.forEach(btn => {
+        btn.textContent = t.downloadCatalog;
+    });
+}
+
+// Update product section translations
+function updateProductSectionTranslations(t) {
+    if (!t) {
+        console.error('Translation object is undefined in updateProductSectionTranslations');
+        return;
+    }
+    
+    console.log('Updating product section with translations');
+    
+    // Section title
+    const productTitle = document.querySelector('.products-section .section-title');
+    if (productTitle) {
+        productTitle.textContent = t.productTitle;
+    } else {
+        console.log('Product title element not found');
+    }
+    
+    // Category tabs
+    const allTab = document.querySelector('.category-tab[data-category="all"]');
+    const cookieTab = document.querySelector('.category-tab[data-category="cookie"]');
+    const biscuitTab = document.querySelector('.category-tab[data-category="biscuit"]');
+    const cakeTab = document.querySelector('.category-tab[data-category="cake"]');
+    const enroberTab = document.querySelector('.category-tab[data-category="enrober"]');
+    
+    if (allTab) allTab.textContent = t.allMachinery;
+    if (cookieTab) cookieTab.textContent = t.cookieMachinery;
+    if (biscuitTab) biscuitTab.textContent = t.biscuitMachinery;
+    if (cakeTab) cakeTab.textContent = t.cakeMachinery;
+    if (enroberTab) enroberTab.textContent = t.enroberMachinery;
+    
+    // Product cards
+    updateProductCardTranslations(t);
+    
+    // View details buttons
+    const detailsButtons = document.querySelectorAll('.product-details-btn');
+    detailsButtons.forEach(btn => {
+        btn.textContent = t.viewDetails;
+    });
+}
+
+// Update product card translations
+function updateProductCardTranslations(t) {
+    // Cookie machines
+    const cookieCards = document.querySelectorAll('.product-card[data-type="cookie"]');
+    if (cookieCards.length >= 4) {
+        updateCardContent(cookieCards[0], t.cookie1Title, t.cookie1Desc);
+        updateCardContent(cookieCards[1], t.cookie2Title, t.cookie2Desc);
+        updateCardContent(cookieCards[2], t.cookie3Title, t.cookie3Desc);
+        updateCardContent(cookieCards[3], t.cookie4Title, t.cookie4Desc);
+    }
+    
+    // Biscuit machines
+    const biscuitCards = document.querySelectorAll('.product-card[data-type="biscuit"]');
+    if (biscuitCards.length >= 1) {
+        updateCardContent(biscuitCards[0], t.biscuit1Title, t.biscuit1Desc);
+    }
+    
+    // Cake machines
+    const cakeCards = document.querySelectorAll('.product-card[data-type="cake"]');
+    if (cakeCards.length >= 4) {
+        updateCardContent(cakeCards[0], t.cake1Title, t.cake1Desc);
+        updateCardContent(cakeCards[1], t.cake2Title, t.cake2Desc);
+        updateCardContent(cakeCards[2], t.cake3Title, t.cake3Desc);
+        updateCardContent(cakeCards[3], t.cake4Title, t.cake4Desc);
+    }
+    
+    // Enrober machines
+    const enroberCards = document.querySelectorAll('.product-card[data-type="enrober"]');
+    if (enroberCards.length >= 2) {
+        updateCardContent(enroberCards[0], t.enrober1Title, t.enrober1Desc);
+        updateCardContent(enroberCards[1], t.enrober2Title, t.enrober2Desc);
+    }
+}
+
+// Helper function to update card content
+function updateCardContent(card, title, description) {
+    if (!card) return;
+    
+    const titleElem = card.querySelector('h3');
+    const descElem = card.querySelector('p');
+    
+    if (titleElem) titleElem.textContent = title;
+    if (descElem) descElem.textContent = description;
+}
+
+// Update footer translations
+function updateFooterTranslations(t) {
+    // Footer description
+    const footerDesc = document.querySelector('.footer-column p:first-of-type');
+    if (footerDesc) footerDesc.textContent = t.footerDesc;
+    
+    // Quick links heading
+    const quickLinksHeading = document.querySelector('.footer-column:nth-child(2) h4');
+    if (quickLinksHeading) quickLinksHeading.textContent = t.quickLinks;
+    
+    // Quick links
+    const quickLinks = document.querySelectorAll('.footer-column:nth-child(2) ul li a');
+    if (quickLinks.length >= 5) {
+        quickLinks[0].textContent = t.home;
+        quickLinks[1].textContent = t.about;
+        quickLinks[2].textContent = t.products;
+        quickLinks[3].textContent = "Services"; // This isn't in our translations yet
+        quickLinks[4].textContent = t.contact;
+    }
+    
+    // Products heading
+    const productsHeading = document.querySelector('.footer-column:nth-child(3) h4');
+    if (productsHeading) productsHeading.textContent = t.footerProducts;
+    
+    // Products links
+    const productLinks = document.querySelectorAll('.footer-column:nth-child(3) ul li a');
+    if (productLinks.length >= 5) {
+        productLinks[0].textContent = t.mixersBlenders;
+        productLinks[1].textContent = t.doughProcessing;
+        productLinks[2].textContent = t.bakingOvens;
+        productLinks[3].textContent = t.coolingSystems;
+        productLinks[4].textContent = t.packagingEquipment;
+    }
+    
+    // Contact heading
+    const contactHeading = document.querySelector('.footer-column:nth-child(4) h4');
+    if (contactHeading) contactHeading.textContent = t.footerContact;
+    
+    // Copyright
+    const copyright = document.querySelector('.footer-bottom p');
+    if (copyright) copyright.textContent = t.copyright;
+}
+     
     </script>
 </body>
 </html>
