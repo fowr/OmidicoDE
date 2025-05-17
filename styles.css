@@ -978,7 +978,7 @@ footer {
 
 @media (max-width: 576px) {
     .logo a img{
-        max-width: 50% ;
+        max-width: 80% ;
     }
     .counter-grid {
         grid-template-columns: 1fr;
