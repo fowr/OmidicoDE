@@ -1183,6 +1183,11 @@ footer {
     .products-grid {
         grid-template-columns: 1fr;
     }
+
+    .carousel-section ,
+    .contact-section{
+    padding: 20px 0;
+}
     
     .category-tab {
         padding: 10px 16px;
