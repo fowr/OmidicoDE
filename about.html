@@ -192,7 +192,7 @@
                         </div>
                         <div class="counter-item">
                             <i class="fas fa-industry"></i>
-                            <h2 class="counter" data-target="800">+0</h2>
+                            <h2 class="counter worker" data-target="800">+0</h2>
                             <p id="counter-clients">Domestic Clients</p>
                         </div>
                         <div class="counter-item">
@@ -372,7 +372,7 @@
     <script>
     // Counter animation
     const counters = document.querySelectorAll('.counter');
-    const speed = 200;
+    const speed = 8000;
 
     counters.forEach(counter => {
         const updateCount = () => {
@@ -383,6 +383,9 @@
             if (count < target) {
                 counter.innerText = Math.ceil(count + inc);
                 setTimeout(updateCount, 1);
+                if(counter.getAttribute('class').length == 14){
+                    counter.innerText+='+'
+                }
             } else {
                 counter.innerText = target;
             }
